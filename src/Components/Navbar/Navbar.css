@@ -5,6 +5,14 @@
     margin: 40px 120px;
     color: white;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+    position: sticky;
+    top: 0;
+    background-color: rgba(255, 255, 255, 0.2);
+    border-radius: 8px; /* Rounds the corners of the box */
+    box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.1); /* Adds a subtle shadow */
+    width: 98%; /* Makes the navbar slightly smaller than the full width */
+    margin: 20px auto;
+    padding: 20px;
 }
 .nav-logo{
     font-family: Outfit;
