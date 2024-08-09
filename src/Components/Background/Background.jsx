@@ -1,6 +1,6 @@
 import React from 'react'
 import './Background.css'
-import video1 from '../../Assets/beach2.mp4'
+import video1 from '../../Assets/beach1.mp4'
 import image1 from '../../Assets/beach.jpg'
 import image2 from '../../Assets/trees.jpg'
 import image3 from '../../Assets/surf.jpg'
@@ -9,7 +9,7 @@ import image4 from '../../Assets/hawai.jpg'
 const Background = ({playStatus,heroCount}) => {
   if(playStatus){
     return(
-      <video className = 'background' autoplay loop muted>
+      <video className = 'background' autoPlay loop muted>
         <source src = {video1} type='video/mp4'/>
       </video>
         )
