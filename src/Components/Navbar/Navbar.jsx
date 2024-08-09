@@ -8,13 +8,12 @@ const Navbar = () => {
       <div className="nav-logo">Travelzilla</div>
       <ul className="nav-menu">
         <li>Home</li>
-        <li>Explore</li>
-        <li>Pricing</li>
-        <li>About</li>
-        <li className='nav-contact'>Contact</li>
+        <li><Link to = "../Pages/Explore.jsx">Explore</Link></li>
+        <li><Link to = "../Pages/Pricing.jsx">Pricing</Link></li>
+        <li><Link to = "../Pages/About.jsx">About</Link></li>
+        <li><Link to = "../Pages/Contact.jsx" className='nav-contact'>Contact</Link></li>
       </ul>
     </div>
   )
 }
-
 export default Navbar
