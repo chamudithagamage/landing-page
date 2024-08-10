@@ -1,9 +1,10 @@
 import React, { useEffect, useState } from 'react'
-import { Route, Routes } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 import Background from './Components/Background/Background';
 import Navbar from './Components/Navbar/Navbar';
 import Hero from './Components/Hero/Hero';
-import About from './Components/Pages/About';
+// import About from './Components/Pages/About';
+import About from './Components/Pages/About'
 import Pricing from './Components/Pages/Pricing';
 import Explore from './Components/Pages/Explore';
 import Contact from './Components/Pages/Contact';
@@ -29,13 +30,15 @@ const App = () => {
    return (
     <div>
       <Background heroCount = {heroCount} playStatus = {playStatus}/>
-      <Navbar/>
-       <Routes>
-        <Route path="./Components/Pages/About.jsx" element={<About/>} />
-        <Route path="./Components/Pages/Pricing.jsx" element={<Pricing/>} />
-        <Route path="./Components/Pages/Explore.jsx" element={<Explore/>} />
-        <Route path="./Components/Pages/Contact.jsx" element={<Contact/>} />
-      </Routes> 
+        <Router>
+          <Navbar/>
+            <Routes>
+              <Route path="./Components/Pages/About.jsx" element={<About/>} />
+              {/* <Route path="./Components/Pages/Pricing.jsx" element={<Pricing/>} /> */}
+              <Route path="./Components/Pages/Explore.jsx" element={<Explore/>} />
+              <Route path="./Components/Pages/Contact.jsx" element={<Contact/>} />
+            </Routes>
+        </Router> 
       <Hero 
         setPlayStatus = {setPlayStatus}
         heroData = {heroData[heroCount]}
